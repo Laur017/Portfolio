@@ -8,6 +8,8 @@ body{
   color: #F4FCF1;
   font-family: 'Krona One', sans-serif;
   letter-spacing: 2px;
+  width: 100%;
+  height: 100vh;
 }
 
 textarea {
@@ -37,8 +39,20 @@ input{
   background-color: #729566;
 }
 
+.about-card{
+  color: #232323;
+}
+
 .wave-hand{
   animation: wave-hand 3s infinite;
+}
+
+.name-text{
+  padding: 64px;
+  background: linear-gradient(to right top, #729566, #91ae87, #b1c8a9, #d2e2cd, #f4fcf1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s infinite linear;
 }
 
 @keyframes wave-hand {
@@ -46,4 +60,45 @@ input{
   50% {transform: rotate(45deg);}
   100% {transform: rotate(0deg);}
   
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  20% {
+    background-position: 10rem;
+  }
+  40% {
+    background-position: 20rem;
+  }
+  60% {
+    background-position: 30rem;
+  }
+  80% {
+    background-position: 40rem;
+  }
+  100% {
+    background-position: 50rem;
+  }
+}
+
+@media (max-width:780px) {
+
+  .app-div{
+    background-color: aquamarine;
+  }
+
+  .home-div{
+    width: 100%;
+
+    h2{
+      flex-direction: column;
+    }
+  }
+
+  nav{
+    width: 100%;
+    background-color: red;
+  }
 }

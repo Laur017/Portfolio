@@ -3,13 +3,13 @@ import Image from '../assets/about-img.png'
 export default function About() {
   return (
     <div className="flex justify-center items-center border w-[80%] h-[80%] rounded-b-lg ">
-        <div className="border w-[90%] h-[50%] rounded-xl flex">
+        <div className="w-[40rem] h-[60%] rounded-xl flex bg-[#F4FCF1] about-card">
             <div className='w-[40%]'>
-                <div className='h-[30%] flex flex-col justify-center border-b-[1px] pl-[0.5rem]'>
-                    <h2 className='text-[#8BB77C] text-[1.5rem] flex items-center gap-[1rem]'>POPA<h4 className='text-[#F4FCF1] text-[0.8rem]'>17.08.2001</h4></h2>
+                <div className='h-[30%] flex flex-col justify-center pl-[0.5rem] border-[#404A3C] border-b-[4px]'>
+                    <h2 className='text-[#8BB77C] text-[1.5rem] flex items-center gap-[1rem]'>POPA<h4 className='text-[#404A3C] text-[0.8rem]'>17.08.2001</h4></h2>
                     <h2 className='text-[#8BB77C] text-[1.5rem]'>LAURENTIU</h2>
                 </div>
-                <div className='h-[40%] flex flex-col justify-center items-center border-b-[1px] text-xs pl-[0.5rem] font-light tracking-[0.15rem]'>
+                <div className='h-[40%] flex flex-col justify-center items-center border-b-[4px] text-xs pl-[0.5rem] font-light tracking-[0.15rem] border-[#404A3C]'>
                     <p>
                         Hi there, my name is Laurentiu a student
                         who is responsable, adaptable, fast learner an good in communication
@@ -28,8 +28,8 @@ export default function About() {
                     </p>
                 </div>
             </div>
-            <div className='w-[30%] border-l-[1px] flex flex-col justify-center items-center'>
-                <div className='h-[30%] w-[100%] text-center flex justify-center items-center border-b-[1px]'>
+            <div className='w-[30%] border-l-[4px] flex flex-col justify-center items-center border-[#404A3C]'>
+                <div className='h-[30%] w-[100%] text-center flex justify-center items-center border-b-[4px] border-[#404A3C]'>
                     <p>FRONTEND DEVELOPER</p>
                 </div>
 
@@ -39,8 +39,13 @@ export default function About() {
                     <p>socials c</p>
                 </div>
             </div>
-            <div className='w-[30%] flex justify-center items-center border-l-[1px]'>
-                <img src={Image} className='w-[100%]' />
+            <div className='w-[30%] flex flex-col justify-center items-center border-l-[4px] border-[#404A3C]'>
+                <div  className='w-[100%] h-[70%] flex justify-center items-center'>
+                    <img src={Image} />
+                </div>
+                <div className='h-[30%] w-[100%] border-t-[4px] flex justify-center items-center border-[#404A3C]'>
+                    <p>Resume</p>
+                </div>
             </div>
         </div>
     </div>

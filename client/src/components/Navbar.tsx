@@ -22,7 +22,7 @@ export default function Navbar({handlePage, page}:Props) {
   }
 
   return (
-    <div className='flex justify-between p-5 border w-[80%] rounded-t-lg'>
+    <nav className='flex justify-between p-5 border w-[80%] rounded-t-lg'>
         <img src={LeftBtns} className='w-20'/>
         <div className='flex justify-evenly w-[50%] gap-[1rem]'>
           <button className={`${page === 1 ? 'text-[#8BB77C]' : 'text-[#F4FCF1] hover:text-[#5dbb63]'} tracking-[1px]`} onClick={()=>handleClick(1)}>Home</button>
@@ -30,6 +30,6 @@ export default function Navbar({handlePage, page}:Props) {
           <button className={`${page === 3 ? 'text-[#8BB77C]' : 'text-[#F4FCF1] hover:text-[#5dbb63]'} tracking-[1px]`} onClick={()=>handleClick(3)}>Work</button>
           <button className={`${page === 4 ? 'text-[#8BB77C]' : 'text-[#F4FCF1] hover:text-[#5dbb63]'} tracking-[1px]`} onClick={()=>handleClick(4)}>Contact</button>
         </div>
-    </div>
+    </nav>
   )
 }

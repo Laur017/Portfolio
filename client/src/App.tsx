@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
+import Work from './components/Work'
 
 type Pages = 1 | 2 | 3 | 4;
 
@@ -15,12 +16,13 @@ function App() {
     setPage(n)
   }
   return (
-    <div className='flex w-[100%] flex-col justify-center items-center h-[100vh]'>
+    <div className='flex w-[100%] flex-col justify-center items-center app-div'>
       <Navbar handlePage={handlePage} page={page}/>
 
       <Routes location={location} key={location.pathname}>
         <Route index element={<Home />} />
         <Route path='/about' element={<About />} />
+        <Route path='/work' element={<Work />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
     </div>
