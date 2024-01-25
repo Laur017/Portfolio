@@ -29,7 +29,7 @@ export default function About() {
                 </div>
             </div>
             <div className='w-[30%] border-l-[1px] flex flex-col justify-center items-center'>
-                <div className='h-[30%] text-center flex justify-center items-center border-b-[1px]'>
+                <div className='h-[30%] w-[100%] text-center flex justify-center items-center border-b-[1px]'>
                     <p>FRONTEND DEVELOPER</p>
                 </div>
 
