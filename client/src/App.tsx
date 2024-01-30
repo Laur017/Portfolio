@@ -18,13 +18,14 @@ function App() {
   return (
     <div className='flex w-[100%] flex-col justify-center items-center app-div'>
       <Navbar handlePage={handlePage} page={page}/>
-
+    <div className="main-div">
       <Routes location={location} key={location.pathname}>
         <Route index element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/work' element={<Work />} />
         <Route path='/contact' element={<Contact />} />
       </Routes>
+    </div>
     </div>
   )
 }

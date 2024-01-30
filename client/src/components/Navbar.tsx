@@ -22,13 +22,13 @@ export default function Navbar({handlePage, page}:Props) {
   }
 
   return (
-    <nav className='flex justify-between p-5 border w-[80%] rounded-t-lg'>
-        <img src={LeftBtns} className='w-20'/>
+    <nav className='flex justify-between items-center p-5 border w-[100%] rounded-t-lg navigation'>
+        <img src={LeftBtns} className='w-16 h-6'/>
         <div className='flex justify-evenly w-[50%] gap-[1rem]'>
-          <button className={`${page === 1 ? 'text-[#8BB77C]' : 'text-[#F4FCF1] hover:text-[#5dbb63]'} tracking-[1px]`} onClick={()=>handleClick(1)}>Home</button>
-          <button className={`${page === 2 ? 'text-[#8BB77C]' : 'text-[#F4FCF1] hover:text-[#5dbb63]'} tracking-[1px`} onClick={()=>handleClick(2)}>About</button>
-          <button className={`${page === 3 ? 'text-[#8BB77C]' : 'text-[#F4FCF1] hover:text-[#5dbb63]'} tracking-[1px]`} onClick={()=>handleClick(3)}>Work</button>
-          <button className={`${page === 4 ? 'text-[#8BB77C]' : 'text-[#F4FCF1] hover:text-[#5dbb63]'} tracking-[1px]`} onClick={()=>handleClick(4)}>Contact</button>
+          <button className={`${page === 1 ? 'text-[#8BB77C]' : 'text-[#F4FCF1] hover:text-[#5dbb63]'} tracking-[1px] mb-2`} onClick={()=>handleClick(1)}>Home</button>
+          <button className={`${page === 2 ? 'text-[#8BB77C]' : 'text-[#F4FCF1] hover:text-[#5dbb63]'} tracking-[1px] mb-2`} onClick={()=>handleClick(2)}>About</button>
+          <button className={`${page === 3 ? 'text-[#8BB77C]' : 'text-[#F4FCF1] hover:text-[#5dbb63]'} tracking-[1px] mb-2`} onClick={()=>handleClick(3)}>Work</button>
+          <button className={`${page === 4 ? 'text-[#8BB77C]' : 'text-[#F4FCF1] hover:text-[#5dbb63]'} tracking-[1px] mb-2`} onClick={()=>handleClick(4)}>Contact</button>
         </div>
     </nav>
   )

@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+#root{
+  display: flex;
+  justify-content: center;
+}
+
 body{
   background-color: #404A3C;
   color: #F4FCF1;
@@ -10,6 +15,9 @@ body{
   letter-spacing: 2px;
   width: 100%;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 textarea {
@@ -25,6 +33,16 @@ input{
   padding: 0.5rem;
   border: 1px solid #404A3C;
   border-radius: 5px;
+}
+
+.main-div{
+  border: 1px solid #F4FCF1;
+  border-radius: 0 0 0.5rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50rem;
+  height: 35rem;
 }
 
 .btn-contact{
@@ -55,6 +73,11 @@ input{
   animation: shine 4s infinite linear;
 }
 
+.app-div{
+  height: 100%;
+  width: 100%;
+}
+
 @keyframes wave-hand {
   0% {transform: rotate(0deg);}
   50% {transform: rotate(45deg);}
@@ -83,22 +106,100 @@ input{
   }
 }
 
-@media (max-width:780px) {
+@media screen and (max-width: 600px) {
+  body{
+    align-items: start !important;
+  }
 
-  .app-div{
-    background-color: aquamarine;
+  .app-div {
+    margin-top: 1rem;
+    width: 95%;
+  }
+
+  .main-div {
+    width: 100%;
+  }
+
+  nav > div{
+    display: none !important;
   }
 
   .home-div{
-    width: 100%;
+   
+  }
 
-    h2{
-      flex-direction: column;
-    }
+  .home-div h2{
+    flex-direction: column;
+    font-size: 1.5rem;
+  }
+
+  .home-div h1{
+    font-size:2.5rem;
+  }
+
+  .home-div h3{
+    font-size: 1.5rem;
+    text-align: center;
   }
 
   nav{
+    justify-content: center !important;
+    gap: 4rem;
+
+    img{
+      width: 5rem !important;
+    }
+  } 
+
+  .about-div{
+    width: 90%;
+    align-items: start;
+    margin-top: -2rem;
+    height: 90%;
+    background-color: #F4FCF1;
+    border-radius: 1rem;
+  }
+
+  .about-card{
+    flex-direction:column;
+    width: 90%;
     width: 100%;
-    background-color: red;
+  }
+
+  .about-card > div {
+    width: 100%;
+  }
+
+  .st-about{
+    width: 100%;
+    border-bottom: 4px solid #404A3C !important;
+    padding: 1rem;
+  }
+
+  .fe-p{
+    display: none;
+  }
+
+  .nd-about{
+    width: 100%;
+    border: none;
+    border-top: 4px solid #404A3C;
+  }
+
+  .socials-about{
+    padding: 1rem;
+  }
+
+  .rd-about{
+    border: none;
+    flex-direction: column-reverse;
+
+    img{
+      width: 50%;
+     }
+  }
+
+  .res-about{
+    border-bottom: 4px solid #404A3C;
   }
 }

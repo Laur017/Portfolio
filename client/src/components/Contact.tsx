@@ -2,7 +2,7 @@ import ContactImg from '../assets/contact.png'
 
 export default function Contact() {
   return (
-    <div className="border w-[80%] h-[80%] rounded-b-lg flex justify-center items-center">
+    <div className="w-[80%] h-[80%] flex justify-center items-center">
         <div className='bg-[#F4FCF1] w-[40rem] h-[60%] flex items-center rounded-[0.5rem] justify-center'>
             <div className='w-[30%] flex justify-center items-center'>
                 <img src={ContactImg} className='w-[70%]'/>
