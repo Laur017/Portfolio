@@ -1,27 +1,57 @@
 import { useState } from "react"
+import Edit from '../../assets/work-img/edit.png'
+import Delete from '../../assets/work-img/delete.png'
 
 export default function TodoApp() {
-    const [tasks, setTasks] = useState<string[]>(["task 1", "task 2"])
+    const [done, setDone] = useState<boolean[]>([])
+    const [tasks, setTasks] = useState<string[]>([])
     const [next, setNext] = useState<string>('')
+    const [back, setBack] = useState<boolean>(false)
+    const [index, setIndex] = useState<number>(0)
 
     const Tasks = tasks.map((i,indx) =>
             <div className="task" key={indx}>
                 <div className="flex items-center gap-[1rem]">
-                    <span></span>
-                    <h2>{i}</h2>
+                    <span className={`${done[indx] && "checked-todo"}`} onClick={()=>handleDone(indx)}></span>
+                    <h2 className={`${done[indx] ? "line-through" : "no-underline"} w-[10rem]`}>{i}</h2>
                 </div>
                 <div className="flex items-center gap-[1rem]">
-                    <h3>e</h3>
-                    <h3>d</h3>
+                    <img src={Edit} onClick={() => handleEdit(indx)}/>
+                    <img src={Delete} onClick={() => deleteTask(indx)}/>
                 </div>
             </div>
     )
 
+    const handleEdit = (n:number) => {
+        setBack(true)
+        setIndex(n)
+    }
+
+    const deleteTask = (n:number) => {
+        const updatedTasks = tasks.filter((_, indx) => indx !== n);
+        setTasks(updatedTasks);
+    }
+
+    const handleTaskChange = (index:number, newValue:string) =>{
+        const updatedTasks = [...tasks];
+        updatedTasks[index] = newValue;
+        setTasks(updatedTasks);
+    }
+
+    const handleDone = (i:number) => {
+        const arr : boolean[] = [...done];
+        arr[i] = !arr[i];
+        setDone(arr);
+    }
+
     const addTask = () => {
         if(next.length){
-            const arr : string[] = tasks;
+            const arr : string[] = [...tasks];
+            const don : boolean[] = [...done];
+            don.push(false)
             arr.push(next)
             setTasks(arr)
+            setDone(don)
             setNext('')
         }
     }
@@ -33,7 +63,7 @@ export default function TodoApp() {
                 <h2>Todo Done</h2>
                 <h3>keep it up</h3>
             </div>
-            <h4>1/{tasks.length}</h4>
+            <h4>{done.filter(i => i === true).length}/{tasks.length}</h4>
         </div>
 
         <div className="mid-todo w-[100%]">
@@ -54,6 +84,16 @@ export default function TodoApp() {
         <div className="down-todo flex gap-[1rem]">
             {Tasks}
         </div>
+
+        {back && 
+            <div className="edit-todo flex items-center">
+                <h2>Edit task</h2>
+                <input type="text" value={tasks[index]} onChange={(e) => handleTaskChange(index, e.target.value)}/>
+                <button onClick={()=>setBack(false)}>Save</button>
+
+            </div>
+        }
+        {back && <div className="back-todo"></div>}
     </div>
   )
 }
