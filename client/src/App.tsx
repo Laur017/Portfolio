@@ -6,6 +6,7 @@ import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
 import Work from './components/Work'
+import TodoApp from './components/Work/TodoApp'
 
 type Pages = 1 | 2 | 3 | 4;
 
@@ -24,6 +25,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/work' element={<Work />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/todo' element={<TodoApp />} />
       </Routes>
     </div>
     </div>

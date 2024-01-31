@@ -1,0 +1,99 @@
+.work-card{
+    cursor: pointer;
+    background-color: #F4FCF1;
+    color: #232323;
+
+    p{
+        text-align: center;
+    }
+}
+
+/*
+    ToDo Page
+*/
+
+.div-todo{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 90%;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;
+}
+
+.div-todo::-webkit-scrollbar {
+    display: none !important;
+  }
+
+.up-todo{
+    border: 1px solid #F4FCF1;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+
+    h2{
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+    h4{
+        background-color: #F4FCF1;
+        color: #404A3C;
+        padding: 1rem;
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+    }
+}
+
+.mid-todo{
+    display: flex;
+    gap: 1rem;
+
+    ::placeholder{
+        color: #f4fcf178;
+    }
+
+    input{
+        background-color: #729566;
+        border-radius: 1rem;
+        width: 90%;
+        color: #F4FCF1;
+        letter-spacing: 2px;
+    }
+
+    p{
+        background-color: #729566;
+        width: 3rem;
+        border-radius: 50%;
+        height: 3rem;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+}
+
+.down-todo{
+    flex-direction: column;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    border:1px solid #F4FCF1;
+    padding: 1rem;
+    border-radius: 0.75rem;
+
+    span{
+        width: 1rem;
+        height: 1rem;
+        border: 2px solid #F4FCF1;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
