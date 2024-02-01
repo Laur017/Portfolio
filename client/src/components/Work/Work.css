@@ -141,3 +141,47 @@
     left: 0;
     background-color: #23232342;
 }
+
+/*
+    Weather Page
+*/
+
+.weather-div{
+    border: 2px solid #F4FCF1;
+    border-radius: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.wea-down{
+    background-color: #F4FCF1;
+    width: 100%;
+    border-radius: 0.75rem;
+    height: 30%;
+    color: #232323;
+    gap: 2rem;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div > p:nth-child(2){
+        font-size: 0.75rem;
+    }
+}
+
+.wea-search{
+    margin-top: 1rem;
+    width: 90%;
+
+    input{
+        width: 70%;
+        letter-spacing: 2px;
+    }
+
+    img{
+        width: 2rem;
+    }
+}
