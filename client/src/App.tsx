@@ -8,6 +8,7 @@ import Contact from './components/Contact'
 import Work from './components/Work'
 import TodoApp from './components/Work/TodoApp'
 import Weather from './components/Work/Weather'
+import BudgetTracking from './components/Work/BudgetTracking'
 
 type Pages = 1 | 2 | 3 | 4;
 
@@ -28,6 +29,7 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/todo' element={<TodoApp />} />
         <Route path='/weather' element={<Weather />} />
+        <Route path='/budget' element={<BudgetTracking />} />
       </Routes>
     </div>
     </div>

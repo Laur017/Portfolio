@@ -185,3 +185,33 @@
         width: 2rem;
     }
 }
+
+/*
+    Budget Tracking Page
+*/
+
+.bud-mid{
+    background-color: #729566;
+    width: 100%;
+    border-radius: 0.5rem;
+    transform: rotate(-10deg);
+
+}
+
+.bud-card{
+    width: 100%;
+    height: 100%;
+    background-color: #2323234c;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    transform: rotate(10deg);
+
+}
+
+.bud-mid:hover{
+    transform: rotate(0deg);
+
+    .bud-card{
+        transform: rotate(0deg);
+    }
+}
