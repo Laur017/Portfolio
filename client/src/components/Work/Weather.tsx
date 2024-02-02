@@ -15,11 +15,11 @@ export default function Weather() {
     const [city, setCity] = useState<string>('Iasi');
     const [count, setCount] = useState<number>(1)
 
-    useEffect(() => {
-        fetch(`https://open-weather13.p.rapidapi.com/city/${city}`,options)
-        .then(res => res.json())
-        .then(dat => setData(dat))
-    },[count])
+    // useEffect(() => {
+    //     fetch(`https://open-weather13.p.rapidapi.com/city/${city}`,options)
+    //     .then(res => res.json())
+    //     .then(dat => setData(dat))
+    // },[count])
 
     useEffect(() => {
         console.log(data)
